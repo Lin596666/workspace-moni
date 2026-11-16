@@ -529,3 +529,160 @@ body {
   font-size: 13px;
   z-index: 80;
 }
+
+/* ---------- 房间模式 ---------- */
+
+.money-pill {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  background: #fdf6e3;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 4px 10px;
+}
+
+.speed-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.speed {
+  border: 1px solid var(--line);
+  background: #fffdf8;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.speed.active {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.room-wrap {
+  background: linear-gradient(180deg, #fdf7ea 0%, #f3e8d3 100%);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 4px 0;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.room {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: manipulation;
+}
+
+.using-tip {
+  font-size: 12px;
+  color: var(--green);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.needs {
+  display: grid;
+  gap: 7px;
+  padding: 14px 16px;
+}
+
+.need-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.need-em {
+  width: 18px;
+  font-size: 13px;
+}
+
+.need-label {
+  width: 30px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.need-track {
+  flex: 1;
+  height: 9px;
+  background: #ece2cf;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.need-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.18s linear;
+}
+
+.need-val {
+  width: 24px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 8px;
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 6px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fffdf8;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.shop-item.active {
+  border-color: var(--red);
+  background: #fdf0ec;
+}
+
+.shop-item:disabled {
+  opacity: 0.4;
+}
+
+.shop-item .em {
+  font-size: 22px;
+}
+
+.shop-item .t {
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.shop-item .p {
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.dock {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 10px;
+}
+
+.dock .btn {
+  flex: 1;
+}

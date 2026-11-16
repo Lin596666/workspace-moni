@@ -20,9 +20,11 @@ import Hud from './components/Hud'
 import BizPanel from './components/BizPanel'
 import EventModal from './components/EventModal'
 import EndScreen from './components/EndScreen'
+import SimScreen from './sim/SimScreen'
 
 export default function App() {
   const [game, setGame] = useState<GameState | null>(() => loadGame())
+  const [mode, setMode] = useState<'life' | 'sim'>('life')
 
   useEffect(() => {
     if (game) saveGame(game)
@@ -37,9 +39,14 @@ export default function App() {
     })
   }
 
+  if (mode === 'sim') {
+    return <SimScreen onExit={() => setMode('life')} />
+  }
+
   if (!game) {
     return (
       <StartScreen
+        onSim={() => setMode('sim')}
         onStart={(opts, college) => {
           const g = createGame(opts)
           if (college) {

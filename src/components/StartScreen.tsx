@@ -3,6 +3,7 @@ import type { Gender, Origin, StartOptions } from '../game/types'
 
 interface Props {
   onStart: (opts: StartOptions, college: boolean) => void
+  onSim?: () => void
 }
 
 const ORIGINS: { id: Origin; label: string; emoji: string; desc: string }[] = [
@@ -11,7 +12,7 @@ const ORIGINS: { id: Origin; label: string; emoji: string; desc: string }[] = [
   { id: 'rural', label: '农村', emoji: '🌾', desc: '底子薄，但身体好、能吃苦' },
 ]
 
-export default function StartScreen({ onStart }: Props) {
+export default function StartScreen({ onStart, onSim }: Props) {
   const [name, setName] = useState('')
   const [gender, setGender] = useState<Gender>('男')
   const [origin, setOrigin] = useState<Origin>('county')
@@ -92,6 +93,16 @@ export default function StartScreen({ onStart }: Props) {
         <button className="btn btn-primary" style={{ width: '100%', marginTop: 8 }} onClick={start}>
           开始这一生
         </button>
+
+        {onSim && (
+          <button
+            className="btn btn-ghost"
+            style={{ width: '100%', marginTop: 8 }}
+            onClick={onSim}
+          >
+            🏠 先进屋看看（实时生活 Demo）
+          </button>
+        )}
       </div>
 
       <div className="tip">每个选择都会留下痕迹，每个时代都会推你一把</div>
