@@ -1,0 +1,12 @@
+{
+  "name": "人间烟火 · 中国式人生经营",
+  "short_name": "人间烟火",
+  "description": "从十八岁开始，做选择、讨生活、盘生意，过完这一生。",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f2e8",
+  "theme_color": "#f7f2e8",
+  "lang": "zh-CN",
+  "icons": []
+}

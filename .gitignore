@@ -32,6 +32,8 @@ $RECYCLE.BIN/
 *.sublime-workspace
 
 # ---------- 日志与临时 ----------
+.tmp/
+dist/
 *.log
 logs/
 npm-debug.log*
