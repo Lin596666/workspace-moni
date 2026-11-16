@@ -1,0 +1,64 @@
+# ---------- 依赖 ----------
+node_modules/
+.pnpm-store/
+vendor/
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+target/
+out/
+.next/
+.nuxt/
+.cache/
+
+# ---------- 系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---------- 编辑器 ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# ---------- 日志与临时 ----------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.tmp
+*.bak
+*.orig
+tmp/
+temp/
+
+# ---------- 环境变量与密钥（重要） ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.pfx
+secrets.*
+credentials.*
+
+# ---------- 数据/产物 ----------
+*.sqlite
+*.db
+coverage/
+.nyc_output/
+*.zip
+!*.ts
